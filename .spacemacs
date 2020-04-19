@@ -34,7 +34,8 @@ values."
    dotspacemacs-configuration-layers
    '(
      my-config
-     python
+     (python :variables
+             python-enable-yapf-format-on-save t)
      lsp
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -43,7 +44,7 @@ values."
      ;; ----------------------------------------------------------------
      helm
      auto-completion
-     better-defaults
+     ;; better-defaults
      emacs-lisp
      git
      markdown
@@ -314,6 +315,10 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (global-company-mode)
+  ;; (pythonic-activate "/Users/sampathsurineni/.pyenv/versions/emacsenv")
+  (pyenv-mode-set "emacsenv")
+  (define-key python-mode-map (kbd "C-j") nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -35,6 +35,8 @@
 (global-set-key (kbd "C-j") 'helm-mini)
 (global-set-key (kbd "C-o") 'helm-find-files) ; finding files
 
+(require 'evil-commands)
+(define-key evil-emacs-state-map (kbd "C-z") nil)
 (global-set-key (kbd "C-z") 'undo-tree-undo)
 
 (setq minions-mode t)

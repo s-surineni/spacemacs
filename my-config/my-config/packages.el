@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst my-config-packages
-  '()
+  '(easy-kill)
   "The list of Lisp packages required by the my-config layer.
 
 Each entry is either:
