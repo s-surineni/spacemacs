@@ -30,7 +30,8 @@
 ;;; Code:
 
 (defconst my-config-packages
-  '(easy-kill)
+  '(easy-kill
+  deadgrep)
   "The list of Lisp packages required by the my-config layer.
 
 Each entry is either:
@@ -59,7 +60,11 @@ Each entry is either:
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
 (defun my-config/init-easy-kill()
-  (use-package easy-kill))
+  (use-package easy-kill)
+  )
+
+(defun my-config/init-deadgrep()
+  (use-package deadgrep))
 
 
 ;;; packages.el ends here

@@ -308,6 +308,14 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (add-hook 'python-mode-hook
+            (lambda()
+              (local-unset-key (kbd "C-j"))))
+  (add-hook 'python-mode-hook
+            (lambda()
+              (define-key python-mode-map (kbd "C-j") nil)))
+  (eval-after-load "python-mode"
+    '(define-key zencoding-mode-keymap (kbd "C-j") nil))
   )
 
 (defun dotspacemacs/user-config ()
@@ -321,6 +329,17 @@ you should place your code here."
   ;; (pythonic-activate "/Users/sampathsurineni/.pyenv/versions/emacsenv")
   (pyenv-mode-set "emacsenv")
   (define-key python-mode-map (kbd "C-j") nil)
+  ;; (evil-define-key 'normal magit-section-mode-map (kbd "M-1") 'winum-select-window-1)
+  (global-set-key (kbd "C-j") 'helm-mini)
+  (define-key evil-normal-state-map (kbd "C-j") 'helm-mini)
+  (add-hook 'python-mode-hook
+            (lambda()
+              (local-unset-key (kbd "C-j"))))
+  (add-hook 'python-mode-hook
+            (lambda()
+              (define-key python-mode-map (kbd "C-j") nil)))
+  (eval-after-load "python-mode"
+    '(define-key zencoding-mode-keymap (kbd "C-j") nil))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

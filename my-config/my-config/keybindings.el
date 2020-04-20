@@ -63,3 +63,14 @@
 
 
 
+;; (defun ido-vertical-define-keys () ;; C-n/p is more intuitive in vertical layout
+;;   (when ido-vertical-define-keys
+;;     (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
+;;     (define-key ido-completion-map (kbd "C-p") 'ido-prev-match)
+;;     (define-key ido-completion-map (kbd "C-c C-t") 'ido-toggle-prefix))
+;;   (when (memq ido-vertical-define-keys '(C-n-C-p-up-and-down C-n-C-p-up-down-left-right))
+;;     (define-key ido-completion-map (kbd "<up>") 'ido-prev-match)
+;;     (define-key ido-completion-map (kbd "<down>") 'ido-next-match))
+;;   (when (eq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
+;;     (define-key ido-completion-map (kbd "<left>") 'ido-vertical-prev-match)
+;;     (define-key ido-completion-map (kbd "<right>") 'ido-vertical-next-match)))
