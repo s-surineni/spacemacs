@@ -1,3 +1,5 @@
+(require 'company)
+(define-key company-mode-map (kbd "<back tab>") 'company-complete)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 
@@ -22,6 +24,8 @@
 
 
 (global-set-key (kbd "M-f") 'forward-char)
+(define-key company-mode-map (kbd "M-q") 'company-complete)
+
 (global-set-key (kbd "M-w") 'kill-region)
 
 
@@ -33,6 +37,7 @@
 (require 'magit)
 (define-key magit-file-section-map (kbd "C-j") nil)
 (global-set-key (kbd "C-j") 'helm-mini)
+(global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-o") 'helm-find-files) ; finding files
 
 (require 'evil-commands)
