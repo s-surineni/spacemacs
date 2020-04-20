@@ -20,7 +20,7 @@ values."
    ;; installation feature and you have to explicitly list a layer in the
    ;; variable `dotspacemacs-configuration-layers' to install it.
    ;; (default 'unused)
-   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-enable-lazy-installation 'nil
    ;; If non-nil then Spacemacs will ask for confirmation before installing
    ;; a layer lazily. (default t)
    dotspacemacs-ask-for-lazy-installation t
@@ -32,18 +32,19 @@ values."
                                            )
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
-     my-config
+   '(javascript
+
      (python :variables
              python-enable-yapf-format-on-save t)
-     lsp
+
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-complete-with-key-sequence-delay 0)
      ;; better-defaults
      emacs-lisp
      git
@@ -55,6 +56,7 @@ values."
      spell-checking
      syntax-checking
      version-control
+     my-config
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
