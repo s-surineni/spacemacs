@@ -33,7 +33,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(javascript
-
+     lsp
      (python :variables
              python-enable-yapf-format-on-save t)
 
@@ -53,7 +53,7 @@ values."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     spell-checking
+     ;; spell-checking
      syntax-checking
      version-control
      my-config
