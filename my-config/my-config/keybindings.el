@@ -61,7 +61,7 @@
 (define-key lisp-interaction-mode-map (kbd "C-j") nil)
 (set-face-attribute 'default nil :height 150)
 
-
+(global-set-key (kbd "C-s") 'helm-swoop)
 
 ;; (defun ido-vertical-define-keys () ;; C-n/p is more intuitive in vertical layout
 ;;   (when ido-vertical-define-keys
