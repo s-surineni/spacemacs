@@ -331,6 +331,9 @@ you should place your code here."
   (global-company-mode)
   ;; (pythonic-activate "/Users/sampathsurineni/.pyenv/versions/emacsenv")
   (pyenv-mode-set "emacsenv")
+  (setq auto-completion-private-snippets-directory '("~/ironman/myemacs/snippets"))
+  ;; (setq yas-snippet-dirs (append yas-snippet-dirs
+  ;;                                '("~/ironman/myemacs/snippets")))
   (define-key python-mode-map (kbd "C-j") nil)
   ;; (evil-define-key 'normal magit-section-mode-map (kbd "M-1") 'winum-select-window-1)
   (global-set-key (kbd "C-j") 'helm-mini)
