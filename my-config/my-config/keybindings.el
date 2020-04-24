@@ -28,7 +28,7 @@
 
 
 (global-set-key (kbd "M-f") 'forward-char)
-(define-key company-mode-map (kbd "M-q") 'company-complete)
+(define-key company-mode-map (kbd "M-j") 'company-complete)
 
 (global-set-key (kbd "M-w") 'kill-region)
 
