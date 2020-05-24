@@ -35,7 +35,9 @@ values."
    '(javascript
      lsp
      (python :variables
-             python-enable-yapf-format-on-save t)
+             python-enable-yapf-format-on-save t
+             python-formatter 'yapf
+             python-sort-imports-on-save t)
 
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
