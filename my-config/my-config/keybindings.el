@@ -25,7 +25,7 @@
 (global-set-key (kbd "M-b") 'backward-char)
 (global-set-key (kbd "M-d") 'delete-char)
 (global-set-key (kbd "M-e") 'end-of-buffer)
-
+(define-key yas-minor-mode-map (kbd "M-;") 'yas-expand)
 
 (global-set-key (kbd "M-f") 'forward-char)
 (define-key company-mode-map (kbd "M-j") 'company-complete)
