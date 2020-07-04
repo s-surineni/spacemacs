@@ -28,7 +28,7 @@ values."
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '(
-                                           "/Users/sampathsurineni/ironman/emacs_starter/spacemacs"
+                                           "/Users/sampathsurineni/ironman/eemacs/spacemacs"
                                            )
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
@@ -51,6 +51,7 @@ values."
      emacs-lisp
      html
      git
+     vue
      markdown
      org
      ;; (shell :variables
@@ -335,8 +336,8 @@ you should place your code here."
   ;; (pythonic-activate "/Users/sampathsurineni/.pyenv/versions/emacsenv")
   (pyenv-mode-set "emacsenv")
   (setq auto-completion-private-snippets-directory '("~/ironman/myemacs/snippets"))
-  ;; (setq yas-snippet-dirs (append yas-snippet-dirs
-  ;;                                '("~/ironman/myemacs/snippets")))
+  (setq yas-snippet-dirs (append yas-snippet-dirs
+                                 '("~/ironman/myemacs/snippets")))
   (define-key python-mode-map (kbd "C-j") nil)
   ;; (evil-define-key 'normal magit-section-mode-map (kbd "M-1") 'winum-select-window-1)
   (global-set-key (kbd "C-j") 'helm-mini)
