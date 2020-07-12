@@ -20,9 +20,14 @@
                                        ("/"   "search project")
                                        ("?"   "show keybindings")
                                        ("a"   "applications")
+                                       ("ac"   "chat")
+                                       ("ae"   "email")
+                                       ("af"   "fun")
+                                       ("ar"   "readers")
+                                       ("am"   "music")
                                        ("at"  "tools")
-                                       ("atg" "geolocation")
-                                       ("A"   "other applications")
+                                       ("ats"  "shells")
+                                       ("aw"  "web-services")
                                        ("c"   "compile/comments")
                                        ("C"   "capture/colors")
                                        ("d"   "documentation")
@@ -177,7 +182,7 @@
    ("y" yank-rectangle "Paste last rectangle"))))
 ;; applications ---------------------------------------------------------------
 (spacemacs/set-leader-keys
-  "ac"  'calc-dispatch
+  "a*"  'calc-dispatch
   "ap"  'list-processes
   "aP"  'proced
   "au"  'undo-tree-visualize)

@@ -313,6 +313,7 @@ sane way, here is the complete list of changed key bindings
 ***** Vagrant
 - Key bindings:
   - Vagrant key bindings prefix is now ~SPC a V~.
+  - Actually use ~SPC a t v t~ for =vagrant-tramp-term=
 ***** YAML
 - Added LSP support (thanks to Seong Yong-ju)
 ***** ycmd
@@ -1171,6 +1172,9 @@ Other:
   - Refactor +layers/+tools packages to use prefix ~at~
     migrating most key bindings to lower cases and
     expanding room for further aliases (thanks to John Stevenson)
+  - Refactor layers/+chat|email|fun|readers|web-services packages to use
+    relative key binding, migrating most key bindings to lower cases and
+    expanding room for further aliases (thanks to John Stevenson)
 - Fixed:
   - Fixed ~h~ key binding in compilation and grep buffers
     (thanks to Sylvain Benner)
@@ -1956,6 +1960,8 @@ Other:
     by upstream changes (thanks to Miciah Dashiel Butler Masters)
   - Unfolded org headings to a target line when a .org file is opened from a
     Magit diff or blame buffer (thanks to duianto and Miciah Masters)
+  - Allowed multichar major mode leader key for exiting magit commit edits
+    (thanks to tuh8888)
 **** Gnus
 - Key bindings:
   - Added ~g r~ for =gnus-group-get-new-news= (thanks to Matthew Leach)
@@ -2032,6 +2038,7 @@ Other:
     environment variables (thanks to Joshua Santos)
   - Fixed =go-run-test-current-function= for vanilla tests and gocheck suite
     tests (thanks to Mathieu Post)
+  - Fixed search for current test function to run (thanks to joelpet)
   - Disabled =go-eldoc-setup= for LSP backend (thanks to Seong Yong-ju)
 **** Graphviz
 - Use graphviz package from melpa (thanks to Matthew Boston)
@@ -3184,6 +3191,7 @@ Other:
   - variable: =layouts-enable-local-variables=
   - function: =spacemacs/make-variable-layout-local=
   (thanks to JAremko and duianto)
+- Better keybindings for ~ESC~ and ~RET~ in vterm =evil-normal-state= (thanks to kenkangxgwe)
 **** Shell Scripts
 - Added new company-shell environment variable backend
   (thanks to Alexander-Miller)
@@ -3276,6 +3284,8 @@ Other:
 - Use correct error list faces when defining error levels with custom bitmaps
   (thanks to Alexander Miller)
 - Fixed =goto-flycheck-error-list= (thanks to Thanh Vuong)
+- Added lsp support for sqls
+  - Added layer variable =sql-lsp-sqls-workspace-config-path= to setting workspace configuration
 **** Swift
 - Update Swift REPL key bindings (thanks to Elliot Bulmer)
 **** Systemd
