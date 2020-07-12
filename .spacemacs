@@ -35,7 +35,7 @@ values."
    '(javascript
      lsp
      (python :variables
-             python-enable-yapf-format-on-save t
+             python-backend 'anaconda
              python-formatter 'yapf
              python-sort-imports-on-save t)
 
