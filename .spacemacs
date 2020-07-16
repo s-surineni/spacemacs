@@ -302,7 +302,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'all
    ))
 
 (defun dotspacemacs/user-init ()
@@ -333,6 +333,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-company-mode)
+  (delete-selection-mode 1)
   ;; (pythonic-activate "/Users/sampathsurineni/.pyenv/versions/emacsenv")
   (pyenv-mode-set "emacsenv")
   (setq auto-completion-private-snippets-directory '("~/ironman/myemacs/snippets"))
@@ -342,6 +343,7 @@ you should place your code here."
   ;; (evil-define-key 'normal magit-section-mode-map (kbd "M-1") 'winum-select-window-1)
   (global-set-key (kbd "C-j") 'helm-mini)
   (define-key evil-normal-state-map (kbd "C-j") 'helm-mini)
+  (add-hook 'python-mode-hook 'yapf-mode)
   ;; (add-hook 'python-mode-hook
   ;;           (lambda()
   ;;             (local-unset-key (kbd "C-j"))))
