@@ -78,3 +78,7 @@
 ;;   (when (eq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
 ;;     (define-key ido-completion-map (kbd "<left>") 'ido-vertical-prev-match)
 ;;     (define-key ido-completion-map (kbd "<right>") 'ido-vertical-next-match)))
+
+;; remap C-a to `smarter-move-beginning-of-line'
+(global-set-key [remap move-beginning-of-line]
+                'smarter-move-beginning-of-line)

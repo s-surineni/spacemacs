@@ -277,7 +277,7 @@ values."
    dotspacemacs-folding-method 'evil
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
-   dotspacemacs-smartparens-strict-mode 1
+   dotspacemacs-smartparens-strict-mode nil
    ;; If non-nil pressing the closing parenthesis `)' key in insert mode passes
    ;; over any automatically added closing parenthesis, bracket, quote, etc…
    ;; This can be temporary disabled by pressing `C-q' before `)'. (default nil)
@@ -323,6 +323,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (add-hook 'python-mode-hook
             (lambda()
               (pyenv-mode-set "emacsenv")))
+  ;; considers camel case
+  (add-hook 'prog-mode-hook 'subword-mode)
   )
 
 (defun dotspacemacs/user-config ()
@@ -332,6 +334,48 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (require 'org-tempo)
+  (spaceline-compile
+  ; left side
+  '(((persp-name
+      workspace-number
+      window-number)
+     :fallback evil-state
+     :face highlight-face
+     :priority 100)
+    (anzu :priority 95)
+    auto-compile
+    ((buffer-modified buffer-size buffer-id remote-host)
+     :priority 98)
+    (major-mode :priority 79)
+    (process :when active)
+    ((flycheck-error flycheck-warning flycheck-info)
+     :when active
+     :priority 150)
+    (minor-modes :when active
+                 :priority 9)
+    (mu4e-alert-segment :when active)
+    (erc-track :when active)
+    (version-control :when active
+                     :priority 2)
+    (org-pomodoro :when active)
+    (org-clock :when active)
+    nyan-cat)
+  ; right side
+  '(which-function
+    (python-pyvenv :fallback python-pyenv)
+    (purpose :priority 94)
+    (battery :when active)
+    (selection-info :priority 95)
+    input-method
+    ((buffer-encoding-abbrev
+      point-position
+      line-column)
+     :separator " | "
+     :priority 96)
+    (global :when active)
+    (buffer-position :priority 99)
+    (hud :priority 99)))
   (global-company-mode)
   (delete-selection-mode 1)
   ;; (pythonic-activate "/Users/sampathsurineni/.pyenv/versions/emacsenv")
